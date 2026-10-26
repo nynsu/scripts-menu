@@ -1,0 +1,7 @@
+﻿# Arquivos de sistema e temporarios
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.zip
+*.rar
