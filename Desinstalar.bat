@@ -4,6 +4,8 @@ echo Removendo Menu de Contexto...
 :: Exclui as chaves do Registro
 reg delete "HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\CriarPastas" /f > nul 2>&1
 reg delete "HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Renomear" /f > nul 2>&1
+reg delete "HKEY_CURRENT_USER\Software\Classes\Directory\shell\CriarPastas" /f > nul 2>&1
+reg delete "HKEY_CURRENT_USER\Software\Classes\Directory\shell\Renomear" /f > nul 2>&1
 
 :: Deleta os arquivos da pasta Scripts
 if exist "%USERPROFILE%\Documents\Scripts\Criar Pastas.bat" (

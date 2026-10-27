@@ -1,6 +1,7 @@
 @echo off
 chcp 65001 > nul
 echo Instalando Menu de Contexto...
+echo.
 
 :: 1. Cria a pasta Scripts dentro de Documentos do usuario se nao existir
 if not exist "%USERPROFILE%\Documents\Scripts" (
@@ -12,12 +13,23 @@ copy /y "%~dp0src\Criar Pastas.bat" "%USERPROFILE%\Documents\Scripts\Criar Pasta
 copy /y "%~dp0src\Renomear.bat" "%USERPROFILE%\Documents\Scripts\Renomear.bat"
 
 :: 3. Registra as opcoes no Registro
+:: 3.1 Ao clicar no fundo de uma pasta aberta ou Area de Trabalho (Directory\Background)
 reg add "HKCU\Software\Classes\Directory\Background\shell\CriarPastas" /ve /d "Script - Criar Pasta" /f > nul
 reg add "HKCU\Software\Classes\Directory\Background\shell\CriarPastas\command" /ve /d "cmd.exe /c cd /d \"%%V\" && \"%USERPROFILE%\Documents\Scripts\Criar Pastas.bat\"" /f > nul
 
 reg add "HKCU\Software\Classes\Directory\Background\shell\Renomear" /ve /d "Script - Renomear" /f > nul
 reg add "HKCU\Software\Classes\Directory\Background\shell\Renomear\command" /ve /d "cmd.exe /c cd /d \"%%V\" && \"%USERPROFILE%\Documents\Scripts\Renomear.bat\"" /f > nul
 
+:: 3.2 Ao clicar diretamente SOBRE uma pasta (Directory)
+reg add "HKCU\Software\Classes\Directory\shell\CriarPastas" /ve /d "Script - Criar Pasta" /f > nul
+reg add "HKCU\Software\Classes\Directory\shell\CriarPastas\command" /ve /d "cmd.exe /c cd /d \"%%1\" && \"%USERPROFILE%\Documents\Scripts\Criar Pastas.bat\"" /f > nul
+
+reg add "HKCU\Software\Classes\Directory\shell\Renomear" /ve /d "Script - Renomear" /f > nul
+reg add "HKCU\Software\Classes\Directory\shell\Renomear\command" /ve /d "cmd.exe /c cd /d \"%%1\" && \"%USERPROFILE%\Documents\Scripts\Renomear.bat\"" /f > nul
+
 echo.
+echo ==================================================
 echo Instalacao concluida com sucesso!
+echo ==================================================
+echo.
 pause

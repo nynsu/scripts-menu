@@ -1,6 +1,6 @@
 # Scripts de Produtividade para Windows (Menu de Contexto)
 
-Conjunto de scripts utilitários integrados ao menu de contexto do Windows (botão direito do mouse na Área de Trabalho ou em qualquer pasta):
+Conjunto de scripts utilitários integrados ao menu de contexto do Windows (botão direito do mouse na Área de Trabalho, no fundo de qualquer pasta ou clicando diretamente sobre uma pasta):
 - **Script - Criar Pasta**: Cria automaticamente a estrutura padrão de pastas para projetos.
 - **Script - Renomear**: Renomeia e padroniza arquivos conforme o fluxo de trabalho.
 
@@ -11,7 +11,7 @@ Conjunto de scripts utilitários integrados ao menu de contexto do Windows (bot�
 1. Baixe a versão mais recente em Releases (arquivo `.zip`).
 2. Extraia o conteúdo do `.zip` em qualquer pasta.
 3. Dê dois cliques no arquivo **`INSTALAR.bat`**.
-4. Pronto! Ao clicar com o botão direito no fundo de qualquer pasta ou na Área de Trabalho, as opções estarão disponíveis.
+4. Pronto! Ao clicar com o botão direito no fundo de qualquer pasta, na Área de Trabalho ou diretamente sobre uma pasta de projeto, as opções estarão disponíveis.
 
 > **Nota:** Não é necessário executar como Administrador, pois o script instala apenas para o seu usuário (`HKEY_CURRENT_USER`).
 
