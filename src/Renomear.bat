@@ -5,7 +5,7 @@ if "%~1" neq "" cd /d "%~1"
 echo ==================================================
 echo   RENOMEADOR AUTOMATICO DE PROJETOS
 echo ==================================================
-echo by: Nynsu + Bard
+echo Supplied by: Nynsu + Bard
 echo.
 echo                       #####
 echo                      #####
@@ -19,7 +19,6 @@ echo                       ###
 echo                        #
 echo.
 echo ==================================================
-echo SUPPLIED BY: SESAI ELE TEAM
 echo HIGH VOLTAGE AUTOMATION // ZERO GROUNDING ERRORS
 echo ==================================================
 echo Diretorio de execucao: %CD%

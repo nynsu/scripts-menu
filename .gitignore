@@ -1,7 +1,9 @@
-﻿# Arquivos de sistema e temporarios
+# Arquivos de sistema e temporarios
 Thumbs.db
 Desktop.ini
 *.log
 *.tmp
 *.zip
 *.rar
+
+*.exe
